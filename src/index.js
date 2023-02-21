@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './reset.css';
 import App from './App';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import CadastroVideo from './pages/video/cadastroVideo'
 
-function CadastroVideo(){
-  return(
-    <>
-      Página de Cadastro de Vídeo
-    </>
-  )
-}
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import CadastroCategoria from './pages/cadastro/Categoria/CadastroCategoria';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +14,7 @@ root.render(
     <Routes>
       <Route path="/"element={<App/>} />
       <Route path="/cadastro/video"element={<CadastroVideo/>} />
+      <Route path="/cadastro/categoria"element={<CadastroCategoria/>} />
     </Routes>   
   </BrowserRouter>
 );
